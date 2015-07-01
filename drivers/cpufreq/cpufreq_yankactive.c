@@ -16,19 +16,29 @@
  *
  */
 
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include <linux/init.h>
+#include <linux/cpufreq.h>
+#include <linux/cpu.h>
+#include <linux/jiffies.h>
+#include <linux/kernel_stat.h>
+#include <linux/mutex.h>
+#include <linux/hrtimer.h>
+#include <linux/tick.h>
+#include <linux/ktime.h>
+#include <linux/sched.h>
+#include <linux/input.h>
+#include <linux/slab.h>
+#include <asm/cputime.h>
+#include <linux/kthread.h>
 #include <linux/cpu.h>
 #include <linux/cpumask.h>
-#include <linux/cpufreq.h>
-#include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/rwsem.h>
-#include <linux/sched.h>
 #include <linux/time.h>
 #include <linux/timer.h>
 #include <linux/workqueue.h>
-#include <linux/kthread.h>
-#include <linux/slab.h>
-#include <asm/cputime.h>
 
 #define DEFAULT_HISPEED_FREQ	1728000
 
