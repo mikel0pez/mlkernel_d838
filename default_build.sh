@@ -1,9 +1,8 @@
 #!/bin/sh
 
 # clean stuff
-rm ~/android/kernel/out/*
 
-make clean && make mrproper
+./clean.sh
 
 # set .config file
 make mike_defconfig
