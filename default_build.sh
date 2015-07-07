@@ -8,7 +8,7 @@
 make mike_defconfig
 
 # build zImage
-make ARCH=arm CROSS_COMPILE=~/android/arm-eabi-4.6/bin/arm-eabi- zImage -j4
+make ARCH=arm CROSS_COMPILE=/home/mike/android/arm-eabi-4.6/bin/arm-eabi- zImage -j4
 
 # build RAMDISK
 ./executables/mkbootfs ~/android/kernel/ramdisk | gzip > ~/android/kernel/out/ramdisk.gz
